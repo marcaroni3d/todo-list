@@ -1,7 +1,4 @@
-const test = () => {
-    const content = document.getElementById('content')
+import './style.css';
+import { render } from './modules/Lists';
 
-    content.innerText = 'working!'
-}
-
-test()
+render()
