@@ -229,7 +229,7 @@ form {
     width: 100%;
     left: 0;
     bottom: -35px;
-    color: var(--light);
+    color: var(--dark);
 }
 
 .btn.delete {

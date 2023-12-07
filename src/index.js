@@ -1,4 +1,4 @@
 import './style.css';
-import { render } from './modules/Lists';
+import UI from './modules/UI';
 
-render()
+document.addEventListener('DOMContentLoaded', UI.init)
