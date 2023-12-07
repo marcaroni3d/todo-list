@@ -1,5 +1,5 @@
-const localStorageKey = 'todo.lists'
-const localStorageIdKey = 'selected.listId'
+const localStorageKey = "all.lists"
+const localStorageIdKey = "selected.id"
 
 export default class Storage {
     static saveSelectedId(id) {
@@ -20,15 +20,21 @@ export default class Storage {
         return lists
     }
 
+    static getList(id) {
+        let lists = Storage.getLists()
+        const selectedList = lists.find(list => list.id === id)
+        return selectedList
+    }
+
     static addList(list) {
         let lists = Storage.getLists()
         lists.push(list)
         Storage.saveLists(lists)
     }
 
-    static deleteList(selectedListId) {
+    static addTask(newTask, id) {
         let lists = Storage.getLists()
-        lists = lists.filter(list => list.id !== selectedListId)
+        lists.map(list => list.id === id ? list.tasks.push(newTask) : list)
         Storage.saveLists(lists)
     }
 }
