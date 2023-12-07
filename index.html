@@ -8,7 +8,7 @@
 <body>
     <h1 class="title">To-Do List</h1>
 
-    <div class="all-lists">
+    <div class="all-lists" data-lists-container>
         <h2 class="all-lists-title">My Lists</h2>
         <ul class="list-display" data-lists></ul>
 
@@ -46,9 +46,9 @@
                 </form>
             </div>
 
-            <div class="delete-stuff">
-                <button class="btn delete">Clear completed tasks</button>
-                <button class="btn delete" data-delete-list-btn>Delete List</button>
+            <div class="delete-buttons" data-delete-container>
+                <button class="btn delete" data-clear-tasks-button>Clear completed tasks</button>
+                <button class="btn delete" data-delete-list-button>Delete List</button>
             </div>
         </div>
     </div>
